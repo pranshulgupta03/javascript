@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="me">Click Me</button>
+    <h1 id="h"></h1>
+    <button id="r">Red</button>
+    <button id="g">green</button>
+    <h1 id="hd"></h1>
+
+<script>
+
+    // console.log("Welcome in JS");
+   // alert("Hello world");
+    // document.write("Hello world");
+    document.getElementById("me").onclick = function() {
+        document.getElementById("h").innerHTML = "My name is pranshul gupta"
+    }
+
+    document.getElementById("r").onclick = function() {
+        document.getElementById("h").style.color = "red"
+    }
+
+    document.getElementById("g").onclick = function() {
+        document.getElementById("hd").innerHTML = new Date();
+    }
+    </script>
+
+</body>
+</html>
