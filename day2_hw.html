@@ -262,7 +262,7 @@
 
 
         // Caculate electricity bill
-        var unit = 180;
+        /* var unit = 180;
         var amt; 
         if(unit <= 50)
         {
@@ -281,7 +281,28 @@
             amt = 220 + ((unit-250) * 1.50);
         }
         amt = amt + amt*0.20;
-        console.log(amt);
+        console.log(amt); */
+
+
+    //Guess the number game    
+    let num = Math.floor(Math.random()*100)
+    let ans = prompt("Guess the number between 1 to 100")
+    let chances = 0;
+    while(num<100){
+        if(ans<num) {
+            alert('Too low')
+            chances++;
+        }
+        else if (ans > num){
+            alert ('too high');
+            chances++ ;
+        }    
+        else{
+            alert ("Correct! "  + "your score is " + (100-chances));
+            break;
+        }
+        ans = prompt("Guess the number again")
+    }
     
     
 
