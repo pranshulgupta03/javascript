@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <p>Lorem ipsum dolor sit amet consectetur.</p> -->
+
+    <script>
+
+        // Snake water gun game
+        let choices = ['s', 'w', 'g'];
+        let randomIndex = Math.floor(Math.random() * choices.length);
+        let userChoice = prompt("Choose among s or w or g");
+        if(userChoice === choices[randomIndex]) {
+            console.log("match tie", "Computer chooses", choices[randomIndex]);
+        }
+        else if ( (userChoice === 's' && choices[randomIndex] === 'w') || (userChoice === 'w' && choices[randomIndex] === 'g') ||(userChoice === 'g' && choices[randomIndex] === 's')) {
+            console.log("Player wins", "Computer chooses", choices[randomIndex]);
+        } 
+        else {
+            console.log("Computer wins", "Computer chooses", choices[randomIndex]);
+        }
+
+
+    </script>
+
+</body>
+</html>
