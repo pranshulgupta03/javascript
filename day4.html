@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <!-- <input type="text" class="inp1">
+    <input type="text" class="inp2">
+    <select name="operation" class="operation">
+        <option value="add" class="opt1">Add</option>
+        <option value="subtract" class="opt2">Subtract</option>
+        <option value="multiply" class="opt3">Multiply</option>
+        <option value="divide" class="opt4">Divide</option>
+        <option value="modulo" class="opt5">Modulo</option>
+    </select> -->
+
+    <!-- <select name="operation1" class="operation1">
+        <option value="green" class="opt1">Green</option>
+        <option value="yellow" class="opt2">Yellow</option>
+        <option value="blue" class="opt3">Blue</option>
+        <option value="red" class="opt4">Red</option>
+        <option value="black" class="opt5">Black</option>
+    </select> -->
+
+    <input type="text" class="inp"> <br> <br>
+    <input type="text" class="inp"> <br> <br>
+    <input type="text" class="inp"> <br> <br>
+    <input type="text" class="inp"> <br> <br>
+    <input type="text" class="inp"> <br> <br>
+    <input type="text" class="inp"> <br> <br>
+    <button class="btn">Submit</button>
+    <button id="btn2">Click me</button>
+
+
+    <script>
+
+        // Naming fnc
+        /* function add(a,b) {
+            console.log(`add = ${a+b}`)
+        }
+        function minus(a,b) {
+            console.log(`minus = ${a-b}`)
+        }
+        function mul(a,b) {
+            console.log(`multiply = ${a*b}`)
+        }
+        function divide(a,b) {
+            console.log(`divide is = ${a/b}`)
+        }
+        add(30,40);
+        minus(20,10);
+        mul(2,6);
+        divide(5,8);*/
+
+
+
+        // Anonymous fnc
+        /*(function (a, b) {
+            console.log(a+ b)
+        } ) (10,20) */
+
+        let a = function() {
+            console.log("Hello")
+        }
+         ();
+        a();
+
+        
+
+        // Arrow fnc
+        ((a,b) => {
+            console.log(a+b)
+        }) (10,6)
+
+
+        /* document.querySelector("#btn2").onclick = function () {
+            console.log("Hello")
+        } */ 
+
+        /* document.getElementsByClassName("operation")[0].onchange = function() {
+            let a = Number(document.getElementsByClassName("inp1")[0].value);
+            let b = Number(document.getElementsByClassName("inp2")[0].value);
+            let operation = document.getElementsByClassName("operation")[0].value;
+            if (operation == "add") {
+                console.log(a+b);
+            } else if (operation == "subtract") {
+                console.log(a-b);
+            } else if (operation == "multiply") {
+                console.log(a*b);
+            } else if (operation == "divide") {
+                console.log(a/b);
+            } else if (operation == "modulo") {
+                console.log(a%b);
+            }
+        }; */
+
+
+        document.getElementsByClassName("btn")[0].onclick = function() {
+            let a = document.getElementsByClassName("inp");
+
+            for(let i of a) {
+                console.log(i.value)
+            }
+            /* for(let i in a) {
+                console.log(a[i].value)
+            } */
+            /* for(let i =0; i<a.length; i++) {
+                console.log(a[i].value);
+            } */
+        }
+
+        /* document.getElementByClassName("operation1")[0].onchange = function() {
+            let operation = document.getElementByClassName("operation1")[0].value;
+            if(operation == "green") {
+                document.body.style.backgroundColor = "green";
+            }
+            else if(operation == "yellow") {
+                document.body.style.backgroundColor = "yellow";
+            }
+            else if(operation == "blue") {
+                document.body.style.backgroundColor = "blue";
+            }
+            else if(operation == "red") {
+                document.body.style.backgroundColor = "red";
+            }
+            else if(operation == "black") {
+                document.body.style.backgroundColor = "black";
+            } 
+        }; */
+    </script>
+</body>
+</html>
