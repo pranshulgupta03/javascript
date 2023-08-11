@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Joke Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  #joke-container {
+    margin: 20px;
+  }
+</style>
+</head>
+<body>
+<h1>Random Joke Generator</h1>
+<div id="joke-container">
+  <p id="joke"></p>
+  <button id="get-joke">Get Another Joke</button>
+</div>
+
+<script>
+const jokes = [
+  "Why don't scientists trust atoms? Because they make up everything!",
+  "Parallel lines have so much in common. It's a shame they'll never meet.",
+  "Why did the scarecrow win an award? Because he was outstanding in his field!",
+  "How do you organize a space party? You planet!",
+  "I told my wife she was drawing her eyebrows too high. She seemed surprised.",
+  "Why did the bicycle fall over? Because it was two-tired!",
+  "What do you call a fake noodle? An impasta!"
+];
+
+const jokeContainer = document.getElementById("joke");
+const getJokeButton = document.getElementById("get-joke");
+
+function getRandomJoke() {
+  const randomIndex = Math.floor(Math.random() * jokes.length);
+  return jokes[randomIndex];
+}
+
+function displayRandomJoke() {
+  const randomJoke = getRandomJoke();
+  jokeContainer.textContent = randomJoke;
+}
+
+getJokeButton.addEventListener("click", displayRandomJoke);
+
+</script>
+</body>
+</html>
