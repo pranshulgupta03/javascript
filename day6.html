@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+    <script>
+
+        //let a = [1,2,3,4,5,6,7,8];
+        /*console.log(a);
+        console.log(a.length);
+        console.log(a.indexOf(5));
+        a.push("10");
+        console.log(a);
+        a.pop();
+        console.log(a);
+        a.unshift(90);
+        console.log(a);
+        a.shift();
+        console.log(a);*/
+
+
+       // let a = [10, 20, 30, 40, 50, 60, 70, 80];
+        /* let x = a.pop();
+        let y = a.shift();
+        a.push(y);
+        a.unshift(x); */
+        // console.log(a.slice(0,5));
+        //a.splice(2,0,"aman");
+        // a.splice(2,1,"aman");
+        // console.log(a); 
+        
+        
+       /* let a = [10, 20, 30, 40, 50, 60, 70, 80];
+       a.splice(0,4)
+       console.log(a); */
+       
+       
+        // Map Function
+        /* let a = [10, 20, 30, 40, 50, 60, 70, 80];
+        let b = a.map(function(item) {
+            return item*2;
+        })
+        console.log(b) */
+
+
+        /* let a = [10, 20, 30, 40, 50, 60, 70, 80];
+        let b = a.map(function(item) {
+            if(item < 50) {
+                return "fail";
+            }
+            else {
+                return "pass";
+            }
+        })
+        console.log(b) */
+        
+
+        // Prime number from 1 to N
+        let a = 50;
+        for (let i = 2; i < 50; i++) {
+            let flag = true;
+            for(let count = 2; count<i/2; count++){
+                if (i % count == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag) {
+                console.log(i)
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
